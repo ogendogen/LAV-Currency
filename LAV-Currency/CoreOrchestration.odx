@@ -1,0 +1,221 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="0e9f34d5-ae84-40be-94ef-ab07ee18c46b" LowerBound="1.1" HigherBound="49.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="GAV_Currency" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="04e489d8-28d5-465c-81e5-51ea7dfd371c" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="InputPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="d0030c54-ea79-4ceb-9d9c-efe134359171" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InputPortOperation" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="47e6fdc2-c8c0-40b6-9a50-6894888e9c58" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.27">
+                    <om:Property Name="Ref" Value="GAV_Currency.MediatedSchema" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="ff3ff727-8006-4daf-aa86-65b4fb319cb7" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="OutputPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="04076b06-92c1-4f9b-bdf0-edc109349bad" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendOutputPort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="6a766df2-5dce-4f68-8629-b724004f805c" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.30">
+                    <om:Property Name="Ref" Value="GAV_Currency.FinalOutputSchema" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="65986ba0-ed64-46f6-94a5-3f5c0323b1fe" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="OutputPortType2" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="69e8ac5e-6494-4cd0-891e-09d84fff64d6" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OutputPortOperation" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="b0c25199-aa41-44f0-983e-29f6f236edc6" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.27">
+                    <om:Property Name="Ref" Value="GAV_Currency.MediatedSchema" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="d7aa636f-f396-439c-ba87-ec2df097e09f" ParentLink="Module_ServiceDeclaration" LowerBound="25.1" HigherBound="48.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CoreOrchestration" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="fb5edd6f-c682-4e6d-9e9d-d3bf00135759" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="32.1" HigherBound="33.1">
+                <om:Property Name="Type" Value="GAV_Currency.MediatedSchema" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MediatedSchemaOutput" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="9bac43b7-35bb-48a2-b8d5-8c70863d738c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="33.1" HigherBound="34.1">
+                <om:Property Name="Type" Value="GAV_Currency.MediatedSchema" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MediatedSchemaInput" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="9078375c-d34a-4b94-9468-2af7e8de6826" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="85482241-39b0-4d64-8e5d-133dc5f032c2" ParentLink="ServiceBody_Statement" LowerBound="36.1" HigherBound="38.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="InputPort" />
+                    <om:Property Name="MessageName" Value="MediatedSchemaInput" />
+                    <om:Property Name="OperationName" Value="InputPortOperation" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="InputLAVReceive" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="2bdb3a85-ccbc-44c3-a629-3d1a48595355" ParentLink="ServiceBody_Statement" LowerBound="38.1" HigherBound="44.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructOutput" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="bc0bf0a5-4f11-45e2-8b20-2d4a40e539e9" ParentLink="ComplexStatement_Statement" LowerBound="41.1" HigherBound="43.1">
+                        <om:Property Name="ClassName" Value="LAV_Currency.CopyingMap" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="CopyingTransform" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="1910990f-0256-453d-a2ee-3cc45bec0064" ParentLink="Transform_InputMessagePartRef" LowerBound="42.77" HigherBound="42.96">
+                            <om:Property Name="MessageRef" Value="MediatedSchemaInput" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="8de8550a-4229-45d9-a957-c3fee278e895" ParentLink="Transform_OutputMessagePartRef" LowerBound="42.28" HigherBound="42.48">
+                            <om:Property Name="MessageRef" Value="MediatedSchemaOutput" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="db9ee844-9890-4be7-8824-36dabc0d32f7" ParentLink="Construct_MessageRef" LowerBound="39.23" HigherBound="39.43">
+                        <om:Property Name="Ref" Value="MediatedSchemaOutput" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="85fcd834-84bd-4729-8a88-9d566fba427a" ParentLink="ServiceBody_Statement" LowerBound="44.1" HigherBound="46.1">
+                    <om:Property Name="PortName" Value="OutputPort" />
+                    <om:Property Name="MessageName" Value="MediatedSchemaOutput" />
+                    <om:Property Name="OperationName" Value="OutputPortOperation" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="OutputLAVSend" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="55e9d24a-9a5e-4f84-9f32-2750496b4614" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="28.1" HigherBound="30.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="4" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="GAV_Currency.InputPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InputPort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="e6fa71a2-814d-47bd-930a-b2c0f3563154" ParentLink="PortDeclaration_CLRAttribute" LowerBound="28.1" HigherBound="29.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="172f80ba-2f8d-4474-8f1f-387ffbdc15c4" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="30.1" HigherBound="32.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="24" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="GAV_Currency.OutputPortType2" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OutputPort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="eada4a67-d938-4dbb-a6f2-4b12898acb35" ParentLink="PortDeclaration_CLRAttribute" LowerBound="30.1" HigherBound="31.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module GAV_Currency
+{
+    internal porttype InputPortType
+    {
+        oneway InputPortOperation
+        {
+            MediatedSchema
+        };
+    };
+    internal porttype OutputPortType
+    {
+        oneway SendOutputPort
+        {
+            FinalOutputSchema
+        };
+    };
+    internal porttype OutputPortType2
+    {
+        oneway OutputPortOperation
+        {
+            MediatedSchema
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service CoreOrchestration
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements InputPortType InputPort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses OutputPortType2 OutputPort;
+        message MediatedSchema MediatedSchemaOutput;
+        message MediatedSchema MediatedSchemaInput;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("85482241-39b0-4d64-8e5d-133dc5f032c2")]
+            activate receive (InputPort.InputPortOperation, MediatedSchemaInput);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2bdb3a85-ccbc-44c3-a629-3d1a48595355")]
+            construct MediatedSchemaOutput
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("bc0bf0a5-4f11-45e2-8b20-2d4a40e539e9")]
+                transform (MediatedSchemaOutput) = LAV_Currency.CopyingMap (MediatedSchemaInput);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("85fcd834-84bd-4729-8a88-9d566fba427a")]
+            send (OutputPort.OutputPortOperation, MediatedSchemaOutput);
+        }
+    }
+}
+
